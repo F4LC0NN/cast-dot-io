@@ -1,0 +1,10 @@
+{
+  "short_name": "Cast.io",
+  "name": "Cast.io, get your forecast in real time",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
