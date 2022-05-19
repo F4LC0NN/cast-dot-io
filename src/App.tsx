@@ -26,9 +26,11 @@ function App(): JSX.Element {
     defaultLocation();
 
     async function getCityName(): Promise<void> {
-      await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${lat}%2C%20${lon}&language=en-us&details=false&toplevel=true`).then((response) => {
-        setCityName(response.data.LocalizedName);
-      });
+      await axios
+        .get(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${lat}%2C%20${lon}&language=en-us&details=false&toplevel=true`)
+        .then((response) => {
+          setCityName(response.data.LocalizedName);
+        });
     }
 
     getCityName();
