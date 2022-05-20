@@ -7,8 +7,8 @@ interface PositionProps {
   key: string,
 }
 
-function useLocationName(args: PositionProps): {locationName: string} {
-  const { lat, lon, key } = args;
+function useLocationName(params: PositionProps): {locationName: string} {
+  const { lat, lon, key } = params;
 
   const [locationName, setLocationName] = useState('');
   useEffect(() => {
