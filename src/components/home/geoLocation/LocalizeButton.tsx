@@ -5,7 +5,7 @@ interface PositionState {
   lonState: React.Dispatch<SetStateAction<number>>,
 }
 
-function TargetPositionButton(props: PositionState): JSX.Element {
+function LocalizeButton(props: PositionState): JSX.Element {
   const { latState, lonState } = props;
 
   const getLocation = (): void => {
@@ -16,8 +16,8 @@ function TargetPositionButton(props: PositionState): JSX.Element {
   };
 
   return (
-    <button type="submit" onClick={getLocation}>Click me</button>
+    <button type="submit" onClick={getLocation}>Localize me</button>
   );
 }
 
-export default TargetPositionButton;
+export default LocalizeButton;

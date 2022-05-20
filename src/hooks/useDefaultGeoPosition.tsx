@@ -1,6 +1,6 @@
 import React, { useState, useEffect, SetStateAction } from 'react';
 
-const useGeoPosition = (): {
+const useDefaultGeoPosition = (): {
   lat: number,
   lon: number,
   setLat: React.Dispatch<SetStateAction<number>>,
@@ -32,4 +32,4 @@ const useGeoPosition = (): {
   };
 };
 
-export default useGeoPosition;
+export default useDefaultGeoPosition;

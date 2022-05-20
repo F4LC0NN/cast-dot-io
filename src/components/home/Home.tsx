@@ -1,25 +1,27 @@
 import React from 'react';
-import useGeoPosition from '../../hooks/useGeoPosition';
+import useDefaultGeoPosition from '../../hooks/useDefaultGeoPosition';
+import BurgerMenuButton from './burgerMenu/BurgerMenuButton';
 
 import DateWidget from './dateWidget/DateWidget';
 
-import LocationCoordinates from './geoLocation/LocationCoordinates';
-import TargetPositionButton from './geoLocation/TargetPositionButton';
+import GlobalGeoLocation from './geoLocation/GlobalGeoLocation';
+import LocalizeButton from './geoLocation/LocalizeButton';
 
 function Home(): JSX.Element {
   const {
     lat, lon, setLat, setLon, key,
-  } = useGeoPosition();
+  } = useDefaultGeoPosition();
 
   return (
     <>
+      <BurgerMenuButton />
       <DateWidget />
-      <LocationCoordinates
+      <GlobalGeoLocation
         locationLat={lat}
         locationLon={lon}
         locationKey={key}
       />
-      <TargetPositionButton latState={setLat} lonState={setLon} />
+      <LocalizeButton latState={setLat} lonState={setLon} />
     </>
   );
 }

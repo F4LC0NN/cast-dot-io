@@ -1,5 +1,5 @@
 import React from 'react';
-import useLocationName from '../../../hooks/useLocationName';
+import useGeoPositionData from '../../../hooks/useGeoPositionData';
 
 interface LocationProps {
   locationLat: number,
@@ -7,18 +7,19 @@ interface LocationProps {
   locationKey: string,
 }
 
-function LocationCoordinates(props: LocationProps): JSX.Element {
+function GlobalGeoLocation(props: LocationProps): JSX.Element {
   const { locationLat, locationLon, locationKey } = props;
 
-  const { locationName } = useLocationName({
+  const { data } = useGeoPositionData({
     lat: locationLat,
     lon: locationLon,
     key: locationKey,
+    url: `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${locationKey}&q=${locationLat}%2C%20${locationLon}&language=en-us&details=false&toplevel=true`,
   });
 
   return (
     <>
-      <h1>{locationName}</h1>
+      <h1>{data.LocalizedName}</h1>
       <p>
         latitude:
         {' '}
@@ -33,4 +34,4 @@ function LocationCoordinates(props: LocationProps): JSX.Element {
   );
 }
 
-export default LocationCoordinates;
+export default GlobalGeoLocation;
