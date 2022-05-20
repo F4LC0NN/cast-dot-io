@@ -1,13 +1,13 @@
 import React from 'react';
 import useGeoPositionData from '../../../hooks/useGeoPositionData';
 
-interface LocationProps {
+interface Location {
   locationLat: number,
   locationLon: number,
   locationKey: string,
 }
 
-function GlobalGeoLocation(props: LocationProps): JSX.Element {
+function GlobalGeoLocation(props: Location): JSX.Element {
   const { locationLat, locationLon, locationKey } = props;
 
   const { data } = useGeoPositionData({
