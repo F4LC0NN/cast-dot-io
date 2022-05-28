@@ -14,7 +14,7 @@ function HomeComponents(): JSX.Element {
   } = useGeoLocationData();
 
   const { forecastData } = useForecastData({
-    url: `https://api.weatherapi.com/v1/current.json?key=c9d9b016dcef4396857104012222705&q=${lat},${lon}&aqi=yes.`,
+    url: `https://api.weatherapi.com/v1/current.json?key=XXXXX&q=${lat},${lon}&aqi=yes.`,
   });
 
   return (

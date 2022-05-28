@@ -18,7 +18,7 @@ function GeoLocationComponent(props: GeoLocation): JSX.Element {
         <h2>{data?.lat}</h2>
         <h2>{data?.lon}</h2>
       </div>
-      <button type="submit" onClick={getUserCurrentLocation}>Locate Me</button>
+      <button type="submit" onClick={getUserCurrentLocation}>Update my forecast</button>
     </>
   );
 }
