@@ -17,6 +17,10 @@ function DateComponent(): JSX.Element {
     setInterval(() => {
       setCurrentTime(new Date().toLocaleTimeString());
     }, 1000);
+
+    return () => {
+      clearInterval();
+    };
   }, [currentTime]);
 
   return (

@@ -22,8 +22,6 @@ function ForecastComponent(props: Forecast): JSX.Element {
     }
   }
 
-  console.log(data);
-
   return (
     <>
       <div>
@@ -52,7 +50,7 @@ function ForecastComponent(props: Forecast): JSX.Element {
         </li>
         <li>
           <p>Humidity</p>
-          <p>{`${data?.humidity}`}</p>
+          <p>{data?.humidity}</p>
         </li>
         <li>
           <button type="button">{'See details >'}</button>
