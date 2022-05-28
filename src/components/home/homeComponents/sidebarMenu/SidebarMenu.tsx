@@ -1,9 +1,9 @@
 import React from 'react';
 
-function BurgerMenuButton(): JSX.Element {
+function SidebarMenu(): JSX.Element {
   return (
     <button type="button">*///*</button>
   );
 }
 
-export default BurgerMenuButton;
+export default SidebarMenu;
