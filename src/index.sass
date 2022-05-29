@@ -1,0 +1,99 @@
+// FONTS
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Light.ttf")
+  font-weight: 300
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-LightItalic.ttf")
+  font-weight: 300
+  font-style: italic
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Regular.ttf")
+  font-weight: 400
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Italic.ttf")
+  font-weight: 400
+  font-style: italic
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Medium.ttf")
+  font-weight: 600
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-MediumItalic.ttf")
+  font-weight: 600
+  font-style: italic
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Bold.ttf")
+  font-weight: 700
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-BoldItalic.ttf")
+  font-weight: 700
+  font-style: italic
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-Black.ttf")
+  font-weight: 900
+
+@font-face
+  font-family: "Rubik"
+  src: url("/assets/fonts/rubik/Rubik-BlackItalic.ttf")
+  font-weight: 900
+  font-style: italic
+
+$fonts: "Rubik", Helvetica, sans-serif
+
+$font-sizes: (title: 3em, subtitle: 2.25em, secondary-title: 1.5em, primary-text: 1em, secondary-text: 0.875em)
+
+//COLORS
+$colors: ( primary: #0E0A38, secondary: #020214, ternary: #063879, quarternary: #2E85D9, quinary: #29C6F4, white-text: #FFFFFF)
+
+//SIZES
+$screen-size: (screen-width: 100vw, screen-height: 100vh)
+  
+html
+  box-sizing: border-box
+  font-family: $fonts
+
+  body, h1, h2, h3, h4, h5, h6,
+  ul, li, button, img, p, span, div  
+    margin: 0
+    padding: 0
+    list-style-type: none
+    text-decoration: none
+    border: none
+    font-size: map-get($font-sizes, primary-text)
+    color: map-get($colors, white-text)
+    background-color: transparent
+
+    h1
+      font-size: map-get($font-sizes, title)
+
+    h2
+      font-size: map-get($font-sizes, subtitle)
+    
+    h3
+      font-size: map-get($font-sizes, secondary-title)
+
+
+*, *::before, *::after
+  box-sizing: inherit
+
+
+body
+  max-width: map-get($screen-size, screen-width)
+  min-height: map-get($screen-size, screen-height)
+  background-image: linear-gradient(to bottom, map-get($colors, primary), map-get($colors, secondary))
