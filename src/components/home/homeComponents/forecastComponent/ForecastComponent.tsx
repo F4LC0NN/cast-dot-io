@@ -23,40 +23,49 @@ function ForecastComponent(props: Forecast): JSX.Element {
   }
 
   return (
-    <>
-      <div>
-        <h2>
+    <div className="forecast-component">
+      <div className="temp-data">
+        <h1>
           {
-            isCelcius ? `${data?.temp_c} °C` : `${data?.temp_f} °F`
-          }
-        </h2>
+              isCelcius ? `${data?.temp_c} °C` : `${data?.temp_f} °F`
+            }
+        </h1>
         <button type="button" onClick={convertTemperature}>
           {
-            isCelcius ? 'Show Farenheit' : 'Show Celcius'
-          }
+              isCelcius ? 'Show Farenheit' : 'Show Celcius'
+            }
         </button>
       </div>
-      <img
-        src={data?.condition.icon}
-        alt={`The weather today is ${data?.condition.text}`}
-      />
-      <ul>
-        <li>{data?.condition.text}</li>
-        <li>
-          <p>Wind cast</p>
-          <p>{isKph ? `Speed: ${data?.wind_kph} Kph` : `Speed: ${data?.wind_mph} Mph`}</p>
-          <button type="button" onClick={convertWindSpeed}>{isKph ? 'Show Mph' : 'Show Kph'}</button>
-          <p>{`Direction: ${data?.wind_dir}`}</p>
-        </li>
-        <li>
-          <p>Humidity</p>
-          <p>{data?.humidity}</p>
-        </li>
-        <li>
-          <button type="button">{'See details >'}</button>
-        </li>
-      </ul>
-    </>
+      <div className="weather-data">
+        <img
+          src={data?.condition.icon}
+          alt={`The weather today is ${data?.condition.text}`}
+          className="temp-icon"
+        />
+        <ul>
+          <li>{data?.condition.text}</li>
+          <li>
+            <p>Wind</p>
+            <p className="wind-speed">
+              {isKph ? `${data?.wind_kph} Km/h` : `${data?.wind_mph} Mph`}
+            </p>
+            <button type="button" onClick={convertWindSpeed}>
+              {isKph ? 'Show Mph' : 'Show Km/h'}
+            </button>
+          </li>
+          <li>
+            <p>{`Direction: ${data?.wind_dir}`}</p>
+          </li>
+          <li>
+            <p>Humidity</p>
+            <p>{`${data?.humidity} %`}</p>
+          </li>
+          <li>
+            <button type="button">{'See details >'}</button>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 

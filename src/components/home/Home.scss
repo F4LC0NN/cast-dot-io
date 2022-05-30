@@ -1,0 +1,230 @@
+@use '../../index.scss' as index;
+
+/*
+----------------------------------------
+HOME COMPONENTS
+----------------------------------------
+*/
+
+/*
+---TOP TOOLBAR---
+*/
+
+.top-toolbar {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+----------------------------------------
+SIDEBAR MENU
+----------------------------------------
+*/
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: index.$white-bg;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar li {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+}
+
+.navbar img {
+  width: 7%;
+  height: fit-content;
+}
+
+.navbar p {
+  width: 93%;
+  height: fit-content;
+  flex: 2;
+  color: index.$primary;
+}
+
+.navbar button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: index.$primary;
+  border:1px solid index.$primary;
+}
+
+// NAVBAR TOGGLE ANIMATION
+
+.navbar-hidden {
+  opacity: 1;
+  transform: translateX(0);
+  animation: show-navbar cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
+}
+
+@keyframes show-navbar {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem);
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+}
+
+.navbar-visible {
+  opacity: 0;
+  transform: translateX(-30rem);
+  
+}
+
+@keyframes hide-navbar {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-30rem);
+    display: none;
+  }
+}
+
+/*
+----------------------------------------
+DATE COMPONENT
+----------------------------------------
+*/
+
+.date-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*
+----------------------------------------
+GEOLOCATION COMPONENT
+----------------------------------------
+*/
+
+.geolocation-component {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.geoposition {
+  width: fit-content;
+}
+
+.geoposition h3 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.coordinates {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.single-coordinate {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.position-icon {
+  width: 1.5rem;
+  transform: rotate(-35deg);
+}
+
+.coordinates .single-coordinate:nth-child(2) .position-icon {
+  transform: rotate(35deg);
+}
+
+.geolocation-component button {
+  width: 50%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: index.$white-bg;
+  border-radius: 10rem;
+}
+
+.geolocation-component button img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.geolocation-component button p {
+  color: index.$primary;
+}
+
+/*
+----------------------------------------
+FORECAST COMPONENT
+----------------------------------------
+*/
+
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-icon {
+  width: 60%;
+  height: fit-content;
+  
+}
+
+.weather-data ul {
+  width: 40%;
+  display: grid;
+  gap: 1rem;
+}
+
+.weather-data ul li:nth-child(1) {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.wind-speed {
+  font-size: 1.125em;
+  font-weight: 700;
+}

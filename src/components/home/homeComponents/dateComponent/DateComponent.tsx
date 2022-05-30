@@ -12,10 +12,10 @@ function DateComponent(): JSX.Element {
     };
   }, [currentDate]);
 
-  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString(navigator.language, { hour: '2-digit', minute: '2-digit' }));
   useEffect(() => {
     setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString());
+      setCurrentTime(new Date().toLocaleTimeString(navigator.language, { hour: '2-digit', minute: '2-digit' }));
     }, 1000);
 
     return () => {
@@ -24,10 +24,10 @@ function DateComponent(): JSX.Element {
   }, [currentTime]);
 
   return (
-    <>
+    <div className="date-component">
       <p>{currentDate}</p>
       <p>{currentTime}</p>
-    </>
+    </div>
   );
 }
 

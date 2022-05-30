@@ -19,8 +19,10 @@ function HomeComponents(): JSX.Element {
 
   return (
     <>
-      <SidebarMenu />
-      <DateComponent />
+      <div className="top-toolbar">
+        <SidebarMenu />
+        <DateComponent />
+      </div>
       <GeoLocationComponent
         data={forecastData.location}
         updateLat={setLat}
