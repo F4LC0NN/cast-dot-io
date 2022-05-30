@@ -33,6 +33,7 @@ SIDEBAR MENU
   flex-direction: column;
   justify-content: space-between;
   background-color: index.$white-bg;
+  z-index: 9999;
 }
 
 .navbar ul {
@@ -70,48 +71,6 @@ SIDEBAR MENU
   border-radius: 0.5rem;
   color: index.$primary;
   border:1px solid index.$primary;
-}
-
-// NAVBAR TOGGLE ANIMATION
-
-.navbar-hidden {
-  opacity: 1;
-  transform: translateX(0);
-  animation: show-navbar cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
-}
-
-@keyframes show-navbar {
-  0% {
-    opacity: 0;
-    transform: translateX(-30rem);
-    display: none;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    display: block;
-  }
-}
-
-.navbar-visible {
-  opacity: 0;
-  transform: translateX(-30rem);
-  
-}
-
-@keyframes hide-navbar {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-    display: block;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(-30rem);
-    display: none;
-  }
 }
 
 /*
@@ -197,6 +156,10 @@ FORECAST COMPONENT
 ----------------------------------------
 */
 
+.forecast-component {
+  margin-bottom: 1rem;
+}
+
 .weather-data {
   display: flex;
   justify-content: space-between;
@@ -227,4 +190,27 @@ FORECAST COMPONENT
 .wind-speed {
   font-size: 1.125em;
   font-weight: 700;
+}
+
+/*
+----------------------------------------
+BOTTOM MODAL NAVBAR
+----------------------------------------
+*/
+
+.bottom-modal-navbar {
+  width: 80vw;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+.bottom-modal-navbar li {
+  padding: 0.5rem;
 }

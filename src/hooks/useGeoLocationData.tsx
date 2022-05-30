@@ -5,9 +5,11 @@ function useGeoLocationData(): {
   lon: number,
   setLat: React.Dispatch<SetStateAction<number>>,
   setLon: React.Dispatch<SetStateAction<number>>,
+  apiKey: string,
   } {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
+  const API_KEY = 'XXXXX';
 
   useEffect(() => {
     setLat(51.52);
@@ -19,6 +21,7 @@ function useGeoLocationData(): {
     lon,
     setLat,
     setLon,
+    apiKey: API_KEY,
   };
 }
 
