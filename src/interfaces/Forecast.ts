@@ -1,5 +1,8 @@
+import { AxiosResponse } from 'axios';
+
 interface Forecast {
-  data: any,
+  data: AxiosResponse['data'],
+  isMetric: boolean,
 }
 
 export default Forecast;

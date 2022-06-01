@@ -89,6 +89,7 @@ $ternary: #063879;
 $quarternary: #2E85D9;
 $quinary: #29C6F4;
 $white-bg: #FFFFFF;
+$transparent-white-bg: #FFFFFF60;
 $white-text: #FFFFFF;
 
 
@@ -153,5 +154,7 @@ body {
 }
 
 .App {
+  max-width: 100vw;
+  min-height: 100vh;
   padding: 2rem;
 }

@@ -6,12 +6,16 @@ HOME COMPONENTS
 ----------------------------------------
 */
 
+.home-components {
+  width: 100%;
+}
+
 /*
 ---TOP TOOLBAR---
 */
 
 .top-toolbar {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -92,7 +96,7 @@ GEOLOCATION COMPONENT
 */
 
 .geolocation-component {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,25 +134,46 @@ GEOLOCATION COMPONENT
   transform: rotate(35deg);
 }
 
-.geolocation-component button {
-  width: 50%;
+.geolocation-button-container {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.target-location-button {
   padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
+  border-radius: 20rem;
   background-color: index.$white-bg;
-  border-radius: 10rem;
 }
 
-.geolocation-component button img {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.geolocation-component button p {
+.target-location-button p {
   color: index.$primary;
 }
+
+.convert-units-button {
+  padding: 0.5rem;
+  position: absolute;
+  top: 0rem;
+  right: -3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.convert-units-button p {
+  width: 0.5rem;
+  font-weight: 600;
+}
+
+
 
 /*
 ----------------------------------------
@@ -157,6 +182,45 @@ FORECAST COMPONENT
 */
 
 .forecast-component {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/*
+---SLIDER & SLIDES---
+*/
+
+.forecast-slider {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.slides {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/*
+----------------------------------------
+FORECAST CURRENT
+----------------------------------------
+*/
+
+.forecast-current {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.temp-data {
   margin-bottom: 1rem;
 }
 
@@ -179,6 +243,7 @@ FORECAST COMPONENT
 }
 
 .weather-data ul li:nth-child(1) {
+  text-align: center;
   padding: 0.25rem;
   display: flex;
   justify-content: center;
@@ -190,6 +255,81 @@ FORECAST COMPONENT
 .wind-speed {
   font-size: 1.125em;
   font-weight: 700;
+}
+
+.forecast-current-link {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.black-arrow-1 {
+  width: 0.5rem;
+  height: fit-content;
+}
+
+/*
+----------------------------------------
+FORECAST DETAILS
+----------------------------------------
+*/
+.forecast-details {
+  display: block;
+}
+
+.forecast-details-table-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.forecast-details-icon {
+  width: 3ch;
+  height: fit-content;
+}
+
+.details-table {
+  display: grid;
+}
+
+.details-table thead tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.details-table tbody {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.details-table tbody tr {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.details-last-column {
+  width: 100%;
+}
+
+.forecast-details-link {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.black-arrow-2 {
+  width: 0.5rem;
+  height: fit-content;
+  transform: rotate(-180deg);
 }
 
 /*

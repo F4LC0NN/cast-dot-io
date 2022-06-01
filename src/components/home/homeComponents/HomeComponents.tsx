@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import useGeoLocationData from '../../../hooks/useGeoLocationData';
 import useForecastData from '../../../hooks/useForecastData';
@@ -10,6 +10,8 @@ import ForecastComponent from './forecastComponent/ForecastComponent';
 import BottomModalNavbar from '../../widgets/bottomModalNavbar/BottomModalNavbar';
 
 function HomeComponents(): JSX.Element {
+  const [isMetric, setIsMetric] = useState(true);
+
   const {
     lat, lon, setLat, setLon, apiKey,
   } = useGeoLocationData();
@@ -19,7 +21,7 @@ function HomeComponents(): JSX.Element {
   });
 
   return (
-    <>
+    <div className="home-components">
       <div className="top-toolbar">
         <SidebarMenu />
         <DateComponent />
@@ -28,10 +30,15 @@ function HomeComponents(): JSX.Element {
         data={forecastData.location}
         updateLat={setLat}
         updateLon={setLon}
+        isMetric={isMetric}
+        setIsMetric={setIsMetric}
       />
-      <ForecastComponent data={forecastData.current} />
+      <ForecastComponent
+        data={forecastData.current}
+        isMetric={isMetric}
+      />
       <BottomModalNavbar />
-    </>
+    </div>
   );
 }
 
