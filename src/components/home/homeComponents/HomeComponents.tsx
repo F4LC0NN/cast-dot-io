@@ -24,7 +24,7 @@ function HomeComponents(): JSX.Element {
     <div className="home-components">
       <div className="top-toolbar">
         <SidebarMenu />
-        <DateComponent />
+        <DateComponent data={forecastData} isMetric={isMetric} />
       </div>
       <GeoLocationComponent
         data={forecastData.location}

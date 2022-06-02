@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Forecast from '../../../../interfaces/Forecast';
+import LocaleDate from '../../../widgets/localeDate/LocaleDate';
 
-function DateComponent(): JSX.Element {
+function DateComponent(props: Forecast): JSX.Element {
   const [currentDate, setCurrentDate] = useState(new Date().toDateString());
+
+  const { data } = props;
+
   useEffect(() => {
     setInterval(() => {
       setCurrentDate(new Date().toDateString());
@@ -25,7 +30,7 @@ function DateComponent(): JSX.Element {
 
   return (
     <div className="date-component">
-      <p>{currentDate}</p>
+      <LocaleDate data={data} isMetric={false} />
       <p>{currentTime}</p>
     </div>
   );

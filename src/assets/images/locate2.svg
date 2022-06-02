@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" fill="none" viewBox="0 0 14 23">
+  <ellipse cx="7.119" cy="19.403" fill="url(#a)" rx="6.295" ry="2.75"/>
+  <path stroke="#fff" d="M13.34 6.943c0 .47-.052.927-.15 1.367-.448 2.44-2.013 6.14-6.08 9.751C2.732 14.255 1.193 10.348.836 7.925a6.294 6.294 0 0 1-.048-.382 5.946 5.946 0 0 1-.013-1.242h.017a6.29 6.29 0 0 1 12.514 0h.006c.019.169.028.362.026.578v.064Zm-6.29 3.144a3.145 3.145 0 1 0 0-6.29 3.145 3.145 0 0 0 0 6.29Z" clip-rule="evenodd"/>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(0 2.74982 -6.29489 0 7.12 19.403)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </radialGradient>
+  </defs>
+</svg>

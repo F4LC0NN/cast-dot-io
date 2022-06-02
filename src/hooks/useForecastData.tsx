@@ -8,9 +8,13 @@ function useForecastData(params: UrlData): { forecastData: AxiosResponse['data']
 
   useEffect(() => {
     async function getForecastData(): Promise<void> {
-      const response = await axios.get(url);
-
-      setForecastData(response.data);
+      try {
+        const response = await axios.get(url);
+        setForecastData(response.data);
+      } catch (error) {
+        const { log } = console;
+        log(error);
+      }
     }
 
     getForecastData();

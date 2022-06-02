@@ -1,0 +1,132 @@
+@use '../../../index.scss' as index;
+
+/*
+----------------------------------------
+SEARCH COMPONENTS
+----------------------------------------
+*/
+
+.search-component {
+  width: 100%;
+  height: fit-content;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/*
+---SEARCH FORM---
+*/
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.help-message {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.7;
+}
+
+.search-query-icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+/*
+----------------------------------------
+SEARCH BAR
+----------------------------------------
+*/
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.search-bar-input {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid index.$transparent-white-bg;
+  border-radius: 20rem;
+}
+
+.search-bar-button {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+.search-bar-button img {
+  width: 1rem;
+  height: 1rem;
+  object-fit: cover;
+}
+
+/*
+----------------------------------------
+SEARCH RESULTS CARD
+----------------------------------------
+*/
+
+.search-results-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.real-time-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.real-time-results > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.real-time-results hr {
+  width: 10ch;
+  height: 0.1rem;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.results-locale-date {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0.7;
+}
+
+.results-location p:nth-child(1){
+  font-weight: 600;
+}
+
+.results-location p:nth-child(2) {
+  opacity: 0.7;
+}
+
+.results-cast {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
