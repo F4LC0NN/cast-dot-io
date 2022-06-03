@@ -11,7 +11,8 @@ SEARCH COMPONENTS
   height: fit-content;
   margin: 1rem 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /*
@@ -77,6 +78,18 @@ SEARCH BAR
 
 /*
 ----------------------------------------
+FORM RESULTS CARD
+----------------------------------------
+*/
+
+.form-results-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*
+----------------------------------------
 SEARCH RESULTS CARD
 ----------------------------------------
 */
@@ -85,6 +98,27 @@ SEARCH RESULTS CARD
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.results-convert-units {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.results-convert-units img {
+  width: 0.5rem;
+}
+
+.results-convert-units p {
+  width: 0.5rem;
 }
 
 .real-time-results {
@@ -113,7 +147,8 @@ SEARCH RESULTS CARD
 
 .results-locale-date {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: end;
   opacity: 0.7;
 }
 
@@ -129,4 +164,120 @@ SEARCH RESULTS CARD
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 2rem;
+}
+
+/*
+----------------------------------------
+SEARCH CAROUSEL
+----------------------------------------
+*/
+
+.search-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-button {
+  padding: 0.5rem 0;
+}
+
+.search-carousel hr {
+  width: 2rem;
+  height: 0.13rem;
+  margin-top: -0.45rem;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+/*
+---SEARCH SLIDER---
+*/
+
+.search-slider {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.search-slider-list {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.search-slide {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/*
+---SEARCH SLIDE CARD---
+*/
+
+.search-slide-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slide-part1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-condition-date {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-slide-date p:nth-child(1) {
+  opacity: 0.7;
+}
+
+.search-slide-date p:nth-child(2) {
+  font-weight: 600;
+}
+
+.search-slide-weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-part2 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.slide-temperature, .slide-humidity, .slide-wind, .slide-direction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slide-part2 img {
+  width: 1rem;
+  height: 1rem;
 }
