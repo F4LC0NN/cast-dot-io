@@ -17,7 +17,11 @@ function ForecastCurrent(props: Forecast):JSX.Element {
     <div className="forecast-current">
       <div className="temp-data">
         <h1>
-          {isMetric ? `${data?.temp_c} °C` : `${data?.temp_f} °F`}
+          {
+            isMetric
+              ? `${data?.temp_c} °C`
+              : `${data?.temp_f} °F`
+          }
         </h1>
       </div>
       <div className="weather-data">
@@ -31,7 +35,11 @@ function ForecastCurrent(props: Forecast):JSX.Element {
           <li>
             <p>Wind</p>
             <p className="wind-speed">
-              {isMetric ? `${data?.wind_kph} km / h` : `${data?.wind_mph} mph`}
+              {
+                isMetric
+                  ? `${data?.wind_kph} km / h`
+                  : `${data?.wind_mph} mph`
+              }
             </p>
           </li>
           <li>

@@ -30,7 +30,9 @@ function ForecastDetails(props: Forecast): JSX.Element {
           <tbody>
             <tr>
               <th>Weather</th>
-              <td>{data?.condition.text}</td>
+              <td className="forecast-details-text">
+                {data?.condition.text}
+              </td>
             </tr>
             <tr>
               <th>Temperature</th>

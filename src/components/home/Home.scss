@@ -233,16 +233,17 @@ FORECAST CURRENT
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .temp-icon {
-  width: 60%;
+  width: 40%;
   height: fit-content;
   
 }
 
 .weather-data ul {
-  width: 40%;
+  width: 60%;
   display: grid;
   gap: 1rem;
 }
@@ -291,11 +292,6 @@ FORECAST DETAILS
   align-items: center;
 }
 
-.forecast-details-icon {
-  width: 3ch;
-  height: fit-content;
-}
-
 .details-table {
   display: grid;
 }
@@ -307,6 +303,11 @@ FORECAST DETAILS
   gap: 2rem;
 }
 
+.forecast-details-icon {
+  width: 3ch;
+  height: fit-content;
+}
+
 .details-table tbody {
   display: grid;
   gap: 0.5rem;
@@ -316,6 +317,10 @@ FORECAST DETAILS
   display: flex;
   justify-content: space-between;
   gap: 4rem;
+}
+
+.forecast-details-text {
+  text-align: end;
 }
 
 .details-last-column {

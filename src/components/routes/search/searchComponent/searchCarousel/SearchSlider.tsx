@@ -59,7 +59,7 @@ function SearchSlider(props: LocalForecast): JSX.Element {
                       {
                         isMetric
                           ? `${item.wind_kph} km / h`
-                          : `${item.wind_kph} mph`
+                          : `${item.wind_mph} mph`
                       }
                     </p>
                   </div>
