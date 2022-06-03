@@ -1,4 +1,4 @@
-import React, { useState, SetStateAction, useEffect } from 'react';
+import React, { useState, SetStateAction } from 'react';
 import gsap from 'gsap/dist/gsap';
 
 import lens from '../../../../../assets/images/lens.svg';
