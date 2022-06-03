@@ -1,4 +1,5 @@
-import React, { useState, SetStateAction } from 'react';
+import React, { useState, SetStateAction, useEffect } from 'react';
+import gsap from 'gsap/dist/gsap';
 
 import lens from '../../../../../assets/images/lens.svg';
 
@@ -12,6 +13,13 @@ function SearchBar(props: NameHandler):JSX.Element {
 
   function searchLocation(): void {
     handler(locationName);
+    setTimeout(() => {
+      gsap.fromTo(
+        '.form-results-card',
+        { opacity: 0, y: -15, display: 'none' },
+        { opacity: 1, y: 0, display: 'block' },
+      );
+    }, 0);
   }
 
   return (

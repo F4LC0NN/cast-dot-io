@@ -71,7 +71,11 @@ SIDEBAR MENU
 }
 
 .navbar button {
+  height: 40px;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.5rem;
   color: index.$primary;
   border:1px solid index.$primary;
@@ -145,6 +149,7 @@ GEOLOCATION COMPONENT
 }
 
 .target-location-button {
+  height: 40px;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
@@ -340,6 +345,7 @@ BOTTOM MODAL NAVBAR
 
 .bottom-modal-navbar {
   width: 80vw;
+  height: 40px;
   position: absolute;
   bottom: 3rem;
   left: 50%;

@@ -56,7 +56,7 @@ function SearchTitleContainer(props: SliderId): JSX.Element {
           className="carousel-button"
           onClick={moveHr}
         >
-          Next Day
+          Day After
         </button>
       </div>
       <hr className="moving-hr" />
