@@ -30,7 +30,7 @@ function BottomModalNavbar(): JSX.Element {
           </button>
         </li>
       </Link>
-      <Link to="/">
+      <Link to="/about">
         <li>
           <button type="button">
             <img src={about} alt="About" />

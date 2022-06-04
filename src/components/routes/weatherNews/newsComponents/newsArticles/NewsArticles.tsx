@@ -11,7 +11,12 @@ function NewsArticles(props: News):JSX.Element {
         {
           data.results?.map((item: Article) => (
             <li key={Math.random()} className="article-item">
-              <a href={item.url} className="article-link">
+              <a
+                href={item.url}
+                target="_blank"
+                className="article-link"
+                rel="noreferrer"
+              >
                 <div className="article-container">
                   <img
                     src={item.multimedia[2].url}

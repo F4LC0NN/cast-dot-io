@@ -61,16 +61,10 @@ function SidebarMenu(): JSX.Element {
               <p>Weather News</p>
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/about">
             <li>
               <img src={about} alt="About" />
               <p>About</p>
-            </li>
-          </Link>
-          <Link to="/">
-            <li>
-              <img src={cog} alt="Settings" />
-              <p>Settings</p>
             </li>
           </Link>
         </ul>

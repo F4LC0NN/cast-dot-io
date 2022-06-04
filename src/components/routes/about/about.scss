@@ -1,0 +1,113 @@
+@use '../../../index.scss' as index;
+
+/*
+----------------------------------------
+ABOUT
+----------------------------------------
+*/
+
+.about {
+  width: 100%;
+}
+
+/*
+----------------------------------------
+ABOUT COMPONENTS
+----------------------------------------
+*/
+
+.about-components {
+  height: 73vh;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow-y: scroll;
+}
+
+/*
+----------------------------------------
+CAST DOT IO
+----------------------------------------
+*/
+
+.cast-dot-io {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 15ch;
+}
+
+.project-text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-text-item::before {
+  content: '•';
+  margin-right: 0.5rem;
+}
+
+/*
+----------------------------------------
+ABOUT ME
+----------------------------------------
+*/
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-container {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+.profile {
+  width: 190px;
+  height: 190px;
+  border-radius: 20rem;
+}
+
+/*
+----------------------------------------
+FOLLOW UP
+----------------------------------------
+*/
+
+.follow-up {
+  transform: scale(0.7);
+}
+
+.social-media-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-copyright {
+  margin-top: 3rem;
+  text-align: center;
+  opacity: 0.7;
+}
