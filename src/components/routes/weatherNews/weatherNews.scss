@@ -1,0 +1,86 @@
+@use '../../../index.scss' as index;
+
+/*
+----------------------------------------
+WEATHER NEWS
+----------------------------------------
+*/
+.news-components {
+  margin-top: 0.25rem;
+}
+
+.nyt-link {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.news-articles {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-item {
+  height: fit-content;
+}
+
+.article-link {
+  text-decoration: none;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article-image {
+  width: 100%;
+  height: fit-content;
+  border-radius: 0.5rem;
+}
+
+.article-subject {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article-date {
+  opacity: 0.7;
+}
+
+.article-credentials {
+  font-size: 0.9em;
+}
+
+.article-author {
+  font-weight: 600;
+}
+
+.article-source {
+  opacity: 0.7;
+}
+
+.article-break {
+  width: 50%;
+  height: 0.2rem;
+  margin: 1rem 0;
+  border-radius: 20rem;
+  background-color: index.$white-bg;
+}
+
+.article-copyright {
+  text-align: center;
+  font-size: 0.5em;
+  font-weight: 600;
+  opacity: 0.6;
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import house from '../../../assets/images/house.svg';
 import lens from '../../../assets/images/lens.svg';
 import cast from '../../../assets/images/cast.svg';
-import cog from '../../../assets/images/cog.svg';
+import about from '../../../assets/images/about.svg';
 
 function BottomModalNavbar(): JSX.Element {
   return (
@@ -23,7 +23,7 @@ function BottomModalNavbar(): JSX.Element {
           </button>
         </li>
       </Link>
-      <Link to="/">
+      <Link to="/weather-news">
         <li>
           <button type="button">
             <img src={cast} alt="Weather News" />
@@ -33,7 +33,7 @@ function BottomModalNavbar(): JSX.Element {
       <Link to="/">
         <li>
           <button type="button">
-            <img src={cog} alt="Settings" />
+            <img src={about} alt="About" />
           </button>
         </li>
       </Link>

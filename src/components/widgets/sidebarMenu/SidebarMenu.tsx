@@ -26,14 +26,14 @@ function SidebarMenu(): JSX.Element {
     if (isToggle) {
       setIsToggle(true);
     }
-    gsap.to(navBarRef.current, { x: 0 });
+    gsap.to(navBarRef.current, { x: 0, display: 'flex' });
   }
 
   function closeNavBar(): void {
     if (isToggle) {
       setIsToggle(false);
     }
-    gsap.to(navBarRef.current, { x: `${-30}rem` });
+    gsap.to(navBarRef.current, { x: `${-30}rem`, display: 'none' });
   }
 
   return (
@@ -55,7 +55,7 @@ function SidebarMenu(): JSX.Element {
               <p>Search city</p>
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/weather-news">
             <li>
               <img src={cast} alt="Weather News" />
               <p>Weather News</p>
