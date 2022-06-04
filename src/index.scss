@@ -128,17 +128,7 @@ html {
     background-color: transparent;
   }
 
-    h1 {
-      font-size: $title;
-    }
-
-    h2 {
-      font-size: $subtitle;
-    }
-
-    h3 {
-      font-size: $secondary-title;
-    }
+    
 }
 
 *, *::before, *::after {
@@ -157,4 +147,14 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   padding: 2rem;
+}
+
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #fff;
 }

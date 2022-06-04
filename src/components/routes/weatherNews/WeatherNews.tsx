@@ -4,7 +4,7 @@ import SidebarMenu from '../../widgets/sidebarMenu/SidebarMenu';
 import NewsComponents from './newsComponents/NewsComponents';
 import BottomModalNavbar from '../../widgets/bottomModalNavbar/BottomModalNavbar';
 
-import './weatherNews.scss';
+import './WeatherNews.scss';
 
 function WeatherNews(): JSX.Element {
   return (

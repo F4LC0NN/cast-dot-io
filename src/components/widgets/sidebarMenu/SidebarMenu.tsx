@@ -10,16 +10,32 @@ import about from '../../../assets/images/about.svg';
 
 function SidebarMenu(): JSX.Element {
   const [isToggle, setIsToggle] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const navBarRef = useRef(null);
 
   useEffect(() => {
-    const leftPos = gsap.from(navBarRef.current, { x: `${-30}rem` });
+    switch (true) {
+      case (windowWidth <= 480):
+        gsap.from(navBarRef.current, { x: `${-30}rem` });
+        break;
+      case (windowWidth >= 481):
+        gsap.to(navBarRef.current, { x: `${-50}rem`, display: 'none' });
+        break;
+      case (windowWidth >= 768):
+        gsap.to(navBarRef.current, { x: `${-100}rem`, display: 'none' });
+        break;
+      default:
+        gsap.to(navBarRef.current, { x: `${-30}rem`, display: 'none' });
+        break;
+    }
+
+    window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
 
     return () => {
-      leftPos.kill();
+      window.removeEventListener('resize', () => setWindowWidth(windowWidth));
     };
-  }, []);
+  }, [windowWidth]);
 
   function openNavBar(): void {
     if (isToggle) {
@@ -32,7 +48,21 @@ function SidebarMenu(): JSX.Element {
     if (isToggle) {
       setIsToggle(false);
     }
-    gsap.to(navBarRef.current, { x: `${-30}rem`, display: 'none' });
+
+    switch (true) {
+      case (windowWidth <= 480):
+        gsap.to(navBarRef.current, { x: `${-30}rem`, display: 'none' });
+        break;
+      case (windowWidth >= 481):
+        gsap.to(navBarRef.current, { x: `${-50}rem`, display: 'none' });
+        break;
+      case (windowWidth >= 768):
+        gsap.to(navBarRef.current, { x: `${-100}rem`, display: 'none' });
+        break;
+      default:
+        gsap.to(navBarRef.current, { x: `${-30}rem`, display: 'none' });
+        break;
+    }
   }
 
   return (

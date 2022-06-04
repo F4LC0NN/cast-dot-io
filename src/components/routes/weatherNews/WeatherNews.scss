@@ -84,3 +84,41 @@ WEATHER NEWS
   font-weight: 600;
   opacity: 0.6;
 }
+
+/*
+----------------------------------------
+MEDIA QUERY
+----------------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+  .nyt-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .news-articles {
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .articles-list {
+    width: 60vw;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .article-subject {
+    gap: 2rem;
+  }
+  
+  .article-title {
+    font-size: 2em;
+  }
+
+  .article-break {
+    margin-bottom: 2rem;
+  }
+}

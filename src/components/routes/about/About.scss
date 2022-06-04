@@ -42,6 +42,12 @@ CAST DOT IO
   width: 15ch;
 }
 
+.cast-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .project-text-list {
   display: flex;
   flex-direction: column;
@@ -83,6 +89,17 @@ ABOUT ME
   border-radius: 20rem;
 }
 
+.profile-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-paragraph p:nth-child(1), 
+.profile-paragraph p:nth-child(10) {
+  font-weight: 600;
+}
+
 /*
 ----------------------------------------
 FOLLOW UP
@@ -110,4 +127,25 @@ FOLLOW UP
   margin-top: 3rem;
   text-align: center;
   opacity: 0.7;
+}
+
+/*
+----------------------------------------
+MEDIA QUERY
+----------------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+  .about-components {
+    align-items: center;
+  }
+
+  .cast-dot-io, .about-me, .follow-up {
+    width: 60vw;
+    margin: auto;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
 }

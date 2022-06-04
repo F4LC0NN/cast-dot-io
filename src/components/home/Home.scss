@@ -365,3 +365,28 @@ BOTTOM MODAL NAVBAR
 .bottom-modal-navbar li {
   padding: 0.5rem;
 }
+
+
+/*
+----------------------------------------
+MEDIA QUERY
+----------------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+  .geoposition {
+    h3 {
+      font-size: 2em;
+    }
+  }
+
+  .forecast-component {
+    width: 60vw;
+    margin: auto;
+  }
+
+  .temp-data {
+    padding-left: 4rem;
+    font-size: 2em;
+  }
+}

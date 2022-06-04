@@ -12,7 +12,12 @@ function NewsComponents(): JSX.Element {
 
   return (
     <div className="news-components">
-      <a href="https://developer.nytimes.com" className="nyt-link">
+      <a
+        href="https://developer.nytimes.com"
+        target="_blank"
+        className="nyt-link"
+        rel="noreferrer"
+      >
         <img src={nyc} alt="Data provided by The New York Times" />
       </a>
       <NewsArticles data={weatherNewsData} />
