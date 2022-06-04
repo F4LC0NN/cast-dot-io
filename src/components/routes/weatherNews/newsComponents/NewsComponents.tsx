@@ -7,7 +7,7 @@ import NewsArticles from './newsArticles/NewsArticles';
 
 function NewsComponents(): JSX.Element {
   const { weatherNewsData } = useWeatherNewsData({
-    url: 'https://api.nytimes.com/svc/news/v3/content/inyt/climate.json?api-key=PAejgGaFMsZjrAyXQlPdWGzsLO0FjFml',
+    url: 'https://api.nytimes.com/svc/news/v3/content/inyt/climate.json?api-key=XXXXX',
   });
 
   return (
