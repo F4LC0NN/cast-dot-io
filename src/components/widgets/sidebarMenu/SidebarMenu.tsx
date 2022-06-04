@@ -7,7 +7,6 @@ import house from '../../../assets/images/house.svg';
 import lens from '../../../assets/images/lens.svg';
 import cast from '../../../assets/images/cast.svg';
 import about from '../../../assets/images/about.svg';
-import cog from '../../../assets/images/cog.svg';
 
 function SidebarMenu(): JSX.Element {
   const [isToggle, setIsToggle] = useState(false);
