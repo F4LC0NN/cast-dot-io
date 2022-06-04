@@ -69,3 +69,30 @@ The goal is to create a complete application from scratch.
 - Create a page where the user can configure their app preferences
 - Build routing structures for page navigation
 - Use react hooks, typescript & Tailwind.css to build the app
+
+### Update about the app
+
+- At first, I wanted to use Tailwind CSS for the design but I chose sass instead.
+
+Even though I like Tailwind CSS, I think it bloats the code too much leaving it
+unreadable.
+
+I am planning to use it for later projects but I need to find a way to separate it from the components.
+
+### Special thanks
+
+I want to thank Weather API & The New York Times for their provided APIs.
+Make sure to visit their page to find out about them.
+
+Weather API: https://www.weatherapi.com/
+The New York Times API: https://developer.nytimes.com
+
+### Legal information
+
+This project is a non-commercial and / or non-fungible project.
+I will not sell, monetize, create business partnership through this project.
+
+The only use case is to showcase my experience as a developer, and use it as a material example.
+
+All rights and usages are not mine, and are strictly reserved for the rightful owners of the APIs, and products showcased in the project.
+
