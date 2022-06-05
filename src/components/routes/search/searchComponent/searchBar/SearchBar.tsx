@@ -1,18 +1,18 @@
-import React, { useState, SetStateAction } from 'react';
+import React, { SetStateAction } from 'react';
 import gsap from 'gsap/dist/gsap';
 
 import lens from '../../../../../assets/images/lens.svg';
 
 interface NameHandler {
-  handler: React.Dispatch<SetStateAction<string>>
+  locationName: string,
+  setLocationName: React.Dispatch<SetStateAction<string>>,
 }
 
 function SearchBar(props: NameHandler):JSX.Element {
-  const [locationName, setLocationName] = useState('');
-  const { handler } = props;
+  const { locationName, setLocationName } = props;
 
   function searchLocation(): void {
-    handler(locationName);
+    setLocationName(locationName);
     setTimeout(() => {
       gsap.fromTo(
         '.form-results-card',
@@ -29,8 +29,14 @@ function SearchBar(props: NameHandler):JSX.Element {
         className="search-bar-input"
         placeholder="Search for a city..."
         onChange={(e) => {
-          e.preventDefault();
-          setLocationName(e.target.value);
+          if (
+            e.target.value.length < 4
+          ) {
+            e.preventDefault();
+          } else {
+            e.preventDefault();
+            setLocationName(e.target.value);
+          }
         }}
       />
       <button

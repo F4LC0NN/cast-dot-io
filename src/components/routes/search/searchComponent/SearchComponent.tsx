@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import gsap from 'gsap/dist/gsap';
 
 import useGeoLocationData from '../../../../hooks/useGeoLocationData';
 import useForecastData from '../../../../hooks/useForecastData';
@@ -22,13 +23,23 @@ function SearchComponent(): JSX.Element {
   });
 
   function handleSubmit(event: { preventDefault: () => void; }): void {
+    setLocationName(locationName);
+
+    setTimeout(() => {
+      gsap.fromTo(
+        '.form-results-card',
+        { opacity: 0, y: -15, display: 'none' },
+        { opacity: 1, y: 0, display: 'block' },
+      );
+    }, 0);
+
     event.preventDefault();
   }
 
   return (
     <div className="search-component">
-      <form method="GET" onSubmit={handleSubmit} className="search-form">
-        <SearchBar handler={setLocationName} />
+      <form onSubmit={handleSubmit} className="search-form">
+        <SearchBar locationName={locationName} setLocationName={setLocationName} />
         {
           locationName === ''
             ? (

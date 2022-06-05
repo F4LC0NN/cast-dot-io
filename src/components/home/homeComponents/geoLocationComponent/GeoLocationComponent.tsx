@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GeoLocation from '../../../../interfaces/GeoLocation';
 
 import locate from '../../../../assets/images/locate.svg';
@@ -9,6 +9,13 @@ function GeoLocationComponent(props: GeoLocation): JSX.Element {
   const {
     data, updateLat, updateLon, isMetric, setIsMetric,
   } = props;
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      updateLat(position.coords.latitude);
+      updateLon(position.coords.longitude);
+    });
+  }, [updateLat, updateLon]);
 
   function getUserCurrentLocation(): void {
     navigator.geolocation.getCurrentPosition((position) => {

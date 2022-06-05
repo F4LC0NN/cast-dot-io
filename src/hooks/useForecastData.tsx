@@ -13,7 +13,7 @@ function useForecastData(params: UrlData): { forecastData: AxiosResponse['data']
         setForecastData(response.data);
       } catch (error) {
         const { log } = console;
-        log(error);
+        log(`Your error is: ${error}`);
       }
     }
 

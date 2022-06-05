@@ -152,9 +152,10 @@ body {
 
 ::-webkit-scrollbar {
   height: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: $transparent-white-bg;
 }
