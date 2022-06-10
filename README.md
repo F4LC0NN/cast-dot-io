@@ -51,6 +51,8 @@ This project is weather app built from react & typescript.
 
 The goal is to create a complete application from scratch.
 
+You can check the project here: https://cast-io.netlify.app
+
 ### Here are the subgoals:
 
 - Create onboarding slides
